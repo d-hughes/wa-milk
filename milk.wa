@@ -1,0 +1,119 @@
+{
+  "d": {
+    "actions": {
+      "finish": [],
+      "init": [],
+      "start": []
+    },
+    "anchorFrameType": "SCREEN",
+    "anchorPoint": "CENTER",
+    "animation": {
+      "finish": {
+        "duration_type": "seconds",
+        "easeStrength": 3,
+        "easeType": "none",
+        "type": "none"
+      },
+      "main": {
+        "duration_type": "seconds",
+        "easeStrength": 3,
+        "easeType": "none",
+        "type": "none"
+      },
+      "start": {
+        "duration_type": "seconds",
+        "easeStrength": 3,
+        "easeType": "none",
+        "type": "none"
+      }
+    },
+    "authorOptions": [],
+    "automaticWidth": "Auto",
+    "color": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "conditions": [],
+    "config": [],
+    "customTextUpdate": "event",
+    "displayText": "M  I  L  K",
+    "displayText_format_p_format": "timed",
+    "displayText_format_p_time_dynamic_threshold": 60,
+    "displayText_format_p_time_format": 0,
+    "displayText_format_p_time_precision": 1,
+    "fixedWidth": 200,
+    "font": "FORCED SQUARE",
+    "fontSize": 72,
+    "frameStrata": 1,
+    "id": "Milk",
+    "information": [],
+    "internalVersion": 50,
+    "justify": "LEFT",
+    "load": {
+      "class": {
+        "multi": []
+      },
+      "size": {
+        "multi": []
+      },
+      "spec": {
+        "multi": []
+      },
+      "talent": {
+        "multi": []
+      }
+    },
+    "outline": "OUTLINE",
+    "regionType": "text",
+    "selfPoint": "BOTTOM",
+    "semver": "1.0.6",
+    "shadowColor": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "shadowXOffset": 1,
+    "shadowYOffset": -1,
+    "subRegions": [
+      {
+        "type": "subbackground"
+      }
+    ],
+    "tocversion": 20503,
+    "triggers": {
+      "1": {
+        "trigger": {
+          "debuffType": "HELPFUL",
+          "event": "Chat Message",
+          "message": "[Mm][Ii!Aa41][Ll!1Ww][Kk]",
+          "message_operator": "match('%s')",
+          "names": [],
+          "spellIds": [],
+          "subeventPrefix": "SPELL",
+          "subeventSuffix": "_CAST_START",
+          "type": "event",
+          "unit": "player",
+          "use_message": true,
+          "use_messageType": false,
+          "use_sourceName": false
+        },
+        "untrigger": []
+      },
+      "activeTriggerMode": -10
+    },
+    "uid": "Ptzi1(DXMXB",
+    "url": "https://wago.io/H1KXkXxhU/7",
+    "version": 7,
+    "wagoID": "H1KXkXxhU",
+    "wordWrap": "WordWrap",
+    "xOffset": 0.00018310546875,
+    "yOffset": 241.18231201172
+  },
+  "m": "d",
+  "s": "3.7.9",
+  "v": 1421,
+  "wagoID": "H1KXkXxhU"
+}

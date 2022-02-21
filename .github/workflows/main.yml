@@ -41,7 +41,7 @@ jobs:
           # Map of absolute file paths as JSON String
           #files: # optional, default is {}
           # A single absolute file path
-          file: $GITHUB_WORKSPACE\milk.lua
+          file: $GITHUB_WORKSPACE\milk.wa
           # Auth Username
           #username: # optional
           # Auth Password
@@ -51,7 +51,7 @@ jobs:
           # Bearer Authentication Token
           #bearerToken: # optional
           # Custom HTTP Headers
-          customHeaders: Authorization $TOKEN
+          customHeaders: Authorization $WAGO_TOKEN
           # Prevent this Action to fail if the request respond without an response
           #preventFailureOnNoResponse: # optional
           # Prevent this Action to fail if the request respond with one of the configured StatusCodes

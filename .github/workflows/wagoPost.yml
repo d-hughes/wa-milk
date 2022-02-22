@@ -31,7 +31,7 @@ jobs:
           curl -f -X POST \
           -F "metadata=$(cat ${{ github.workspace }}/metadata > $WAGO_METADATA)" \
           -F "file=${{ github.workspace }}/milk.wa" \
-          -H "authorization: Bearer ${{ secrets.WAGO_TOKEN }}" \
+          -H "authorization: Bearer ${{ secrets.WAGO_TOKEN }}"
           -H "accept: application/json" \
           https://addons.wago.io/api/projects/H1KXkXxhU/version
 

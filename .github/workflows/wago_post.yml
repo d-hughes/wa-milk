@@ -12,6 +12,9 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+  
+env:
+  WAGO_PAYLOAD: ""
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -24,6 +27,9 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+      
+      - name: Build Payload
+        run: $WAGO_PAYLOAD = cat "${{ github.workspace }}/milk.wa"
 
       # Runs a set of commands using the runners shell
       - name: Web Request Action
@@ -36,7 +42,7 @@ jobs:
           # Web request method (`GET`, `POST`, `PUT`, `PATCH`, `DELETE`)
           method: POST
           # Web request payload in JSON format
-          payload: $(cat "${{ github.workspace }}/milk.wa")
+          payload: ${{ wago_payload }}
           # Web request headers in JSON format
           #headers: # optional
           # username for BASIC auth

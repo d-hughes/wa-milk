@@ -30,7 +30,7 @@ jobs:
       
       - name: Build metadata
         run : |
-          cat ${{ github.workspace }}/metadata >> $WAGO_METADATA
+          cat "${{ github.workspace }}/metadata"
           
       - name: Display metadata
         run : |

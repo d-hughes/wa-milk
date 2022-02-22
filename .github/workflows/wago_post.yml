@@ -36,7 +36,7 @@ jobs:
           # Web request method (`GET`, `POST`, `PUT`, `PATCH`, `DELETE`)
           method: POST
           # Web request payload in JSON format
-          payload: "${{ github.workspace }}/milk.wa"
+          payload: "cat ${{ github.workspace }}/milk.wa"
           # Web request headers in JSON format
           #headers: # optional
           # username for BASIC auth

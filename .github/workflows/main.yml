@@ -26,7 +26,7 @@ jobs:
       - uses: actions/checkout@v2
       
       - name: Test
-        run: echo File is $GITHUB_WORKSPACE/milk.wa
+        run: echo "File is ${{ github.workspace }}/milk.wa"
 
       - name: HTTP Request Action
   # You may pin to the exact commit or the version.
@@ -44,7 +44,7 @@ jobs:
           # Map of absolute file paths as JSON String
           #files: # optional, default is {}
           # A single absolute file path
-          file: '$GITHUB_WORKSPACE/milk.wa'
+          file: "${{ github.workspace }}/milk.wa"
           # Auth Username
           #username: # optional
           # Auth Password

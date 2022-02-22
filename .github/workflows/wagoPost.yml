@@ -31,10 +31,10 @@ jobs:
       # Runs a single command using the runners shell
       - name: Curl Script 
         run: |
-          cat "${{ github.workspace }}/metadata" > $WAGO_METADATA
+          cat "${{ github.workspace }}/metadata" > ${{env.WAGO_METADATA}}
           echo $WAGO_METADATA
           curl -f -X POST \
-          -F "metadata=$WAGO_METADATA" \
+          -F "metadata=${{env.WAGO_METADATA}}" \
           -F "file=${{ github.workspace }}/milk.wa" \
           -H "authorization: Bearer ${{ secrets.WAGO_TOKEN }}" \
           -H "accept: application/json" \

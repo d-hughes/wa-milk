@@ -44,17 +44,17 @@ jobs:
           # Map of absolute file paths as JSON String
           #files: # optional, default is {}
           # A single absolute file path
-          file: $GITHUB_WORKSPACE/wa-milk/milk.wa
+          file: $GITHUB_WORKSPACE/milk.wa
           # Auth Username
           #username: # optional
           # Auth Password
-          #password: # optional
+          password: ${{ secrets.GITHUB_TOKEN }}
           # Request Timeout in Sec
           #timeout: # optional, default is 5000
           # Bearer Authentication Token
           #bearerToken: # optional
           # Custom HTTP Headers
-          customHeaders: Authorization ${{ secrets.GITHUB_TOKEN }}
+          #customHeaders: Authorization 
           # Prevent this Action to fail if the request respond without an response
           #preventFailureOnNoResponse: # optional
           # Prevent this Action to fail if the request respond with one of the configured StatusCodes

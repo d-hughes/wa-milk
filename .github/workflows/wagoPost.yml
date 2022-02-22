@@ -12,6 +12,9 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+  
+env:
+  WAGO_METADATA: "{}"
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -24,14 +27,18 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+      
+      - name: Build metadata
+        run : |
+          cat ${{ github.workspace }}/metadata >> $WAGO_METADATA
 
       # Runs a single command using the runners shell
       - name: Curl Script 
         run: |
           curl -f -X POST \
-          -F "metadata=$(cat ${{ github.workspace }}/metadata > $WAGO_METADATA)" \
+          -F "metadata=${{ env.WAGO_METADATA }}" \
           -F "file=${{ github.workspace }}/milk.wa" \
-          -H "authorization: Bearer ${{ secrets.WAGO_TOKEN }}"
+          -H "authorization: Bearer ${{ secrets.WAGO_TOKEN }}" \
           -H "accept: application/json" \
           https://addons.wago.io/api/projects/H1KXkXxhU/version
 

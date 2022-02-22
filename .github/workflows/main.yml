@@ -51,7 +51,7 @@ jobs:
           # Bearer Authentication Token
           #bearerToken: # optional
           # Custom HTTP Headers
-          customHeaders: Authorization $WAGO_TOKEN
+          customHeaders: Authorization ${{ secrets.GITHUB_TOKEN }}
           # Prevent this Action to fail if the request respond without an response
           #preventFailureOnNoResponse: # optional
           # Prevent this Action to fail if the request respond with one of the configured StatusCodes

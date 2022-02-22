@@ -14,7 +14,7 @@ on:
   workflow_dispatch:
   
 env:
-  WAGO_METADATA: "{}"
+  WAGO_METADATA: ""
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -30,7 +30,7 @@ jobs:
       
       - name: Build metadata
         run : |
-          cat "${{ github.workspace }}/metadata" > $WAGO_METADATA
+          cat "${{ github.workspace }}/metadata" >> $WAGO_METADATA
           
       - name: Display metadata
         run : |
@@ -40,7 +40,7 @@ jobs:
       - name: Curl Script 
         run: |
           curl -f -X POST \
-          -F "metadata=${{ env.WAGO_METADATA }}" \
+          -F "metadata=$WAGO_METADATA" \
           -F "file=${{ github.workspace }}/milk.wa" \
           -H "authorization: Bearer ${{ secrets.WAGO_TOKEN }}" \
           -H "accept: application/json" \

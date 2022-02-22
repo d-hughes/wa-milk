@@ -30,7 +30,7 @@ jobs:
       
       - name: Build Payload
         run: |
-            cat ${{ github.workspace }}/milk.wa >> "$WAGO_PAYLOAD"
+            cat ${{ github.workspace }}/milk.wa >> ${{ env.WAGO_PAYLOAD }}
 
       # Runs a set of commands using the runners shell
       - name: Web Request Action

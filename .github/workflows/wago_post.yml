@@ -42,7 +42,7 @@ jobs:
           # Web request method (`GET`, `POST`, `PUT`, `PATCH`, `DELETE`)
           method: POST
           # Web request payload in JSON format
-          payload: ${{ wago_payload }}
+          payload: $WAGO_PAYLOAD
           # Web request headers in JSON format
           #headers: # optional
           # username for BASIC auth

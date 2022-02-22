@@ -1,0 +1,8 @@
+{
+  "label": "1.0.7", // replace with your release name
+  "stability": "stable", // one of: stable, beta, alpha
+  "changelog": "#TestDeployment", // your release changelog as a markdown string
+
+  // You have to add at least one of the following 3 properties.
+  "supported_bc_patch": "2.5.1"
+}

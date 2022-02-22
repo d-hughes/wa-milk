@@ -14,7 +14,7 @@ on:
   workflow_dispatch:
   
 env:
-  WAGO_FILE: $GITHUB_WORKSPACE/milk.wa #Weak Aura file for upload
+  WAGO_FILE: "$GITHUB_WORKSPACE/milk.wa" #Weak Aura file for upload
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -47,7 +47,7 @@ jobs:
           # Map of absolute file paths as JSON String
           #files: # optional, default is {}
           # A single absolute file path
-          file: $WAGO_FILE
+          file: ${{ WAGO_FILE }}
           # Auth Username
           #username: # optional
           # Auth Password

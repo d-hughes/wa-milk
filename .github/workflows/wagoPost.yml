@@ -30,11 +30,11 @@ jobs:
       
       - name: Build metadata
         run : |
-          cat "${{ github.workspace }}/metadata" >> $WAGO_METADATA
+          cat "${{ github.workspace }}/metadata" >> ${{ env.WAGO_METADATA }}
           
       - name: Display metadata
         run : |
-          echo $WAGO_METADATA
+          echo ${{ env.WAGO_METADATA }}
 
       # Runs a single command using the runners shell
       - name: Curl Script 

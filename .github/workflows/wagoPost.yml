@@ -27,18 +27,12 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      
-      - name: Build metadata
-        run : |
-          cat "${{ github.workspace }}/metadata" >> ${{ env.WAGO_METADATA }}
-          
-      - name: Display metadata
-        run : |
-          echo ${{ env.WAGO_METADATA }}
 
       # Runs a single command using the runners shell
       - name: Curl Script 
         run: |
+          cat "${{ github.workspace }}/metadata" > $WAGO_METADATA
+          echo $WAGO_METADATA
           curl -f -X POST \
           -F "metadata=$WAGO_METADATA" \
           -F "file=${{ github.workspace }}/milk.wa" \

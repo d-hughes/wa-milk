@@ -12,6 +12,9 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+  
+env:
+  WAGO_FILE: $GITHUB_WORKSPACE/milk.wa #Weak Aura file for upload
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -26,7 +29,7 @@ jobs:
       - uses: actions/checkout@v2
       
       - name: Test
-        run: ls $GITHUB_WORKSPACE
+        run: echo File is $WAGO_FILE
 
       - name: HTTP Request Action
   # You may pin to the exact commit or the version.
@@ -44,7 +47,7 @@ jobs:
           # Map of absolute file paths as JSON String
           #files: # optional, default is {}
           # A single absolute file path
-          file: $GITHUB_WORKSPACE/milk.wa
+          file: $WAGO_FILE
           # Auth Username
           #username: # optional
           # Auth Password

@@ -41,7 +41,7 @@ jobs:
           # Map of absolute file paths as JSON String
           #files: # optional, default is {}
           # A single absolute file path
-          file: $GITHUB_WORKSPACE/milk.wa
+          file: $GITHUB_WORKSPACE/wa-milk/milk.wa
           # Auth Username
           #username: # optional
           # Auth Password

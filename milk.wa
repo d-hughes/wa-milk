@@ -68,7 +68,7 @@
     "outline": "OUTLINE",
     "regionType": "text",
     "selfPoint": "BOTTOM",
-    "semver": "1.0.6",
+    "semver": "1.0.7",
     "shadowColor": [
       0,
       0,
@@ -88,7 +88,7 @@
         "trigger": {
           "debuffType": "HELPFUL",
           "event": "Chat Message",
-          "message": "[Mm][Ii!Aa41][Ll!1Ww][Kk]",
+          "message": "[MmN][Ii!Aa41][Ll!1Ww][Kk]",
           "message_operator": "match('%s')",
           "names": [],
           "spellIds": [],
@@ -106,7 +106,7 @@
     },
     "uid": "Ptzi1(DXMXB",
     "url": "https://wago.io/H1KXkXxhU/7",
-    "version": 7,
+    "version": 8,
     "wagoID": "H1KXkXxhU",
     "wordWrap": "WordWrap",
     "xOffset": 0.00018310546875,

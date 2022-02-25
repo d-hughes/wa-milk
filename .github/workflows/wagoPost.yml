@@ -27,15 +27,25 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+      
+      # Wago.io Scan Import String REQUIRES COMPLETION
+      - name: Curl - Scan Import String
+        run: |
+          curl -f -X POST \
+          --data "${{ github.workspace }}/milk.wa"
+          https://data9.wago.io/import/scan
+          
 
       # Runs a single command using the runners shell
-      - name: Curl Script 
+      - name: Curl - Submit Scan ID
         run: |
           curl -f -X POST \
           -F "metadata=$(cat ${{ github.workspace }}/metadata)" \
           -F "file=${{ github.workspace }}/milk.wa" \
           -H "authorization: Bearer ${{ secrets.WAGO_TOKEN }}" \
           -H "accept: application/json" \
+          -H "cookie: ${{ secrets.WAGO_COOKIE }}" \
+          -H "x-auth-token: ${{ secrets.WAGO_XAUTH }}" \
           https://addons.wago.io/api/projects/wa-milk/version
 
       # Runs a set of commands using the runners shell
